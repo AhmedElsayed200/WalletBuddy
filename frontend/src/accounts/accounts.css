@@ -1,0 +1,45 @@
+.accounts-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  }
+  
+  .accounts-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .accounts-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .accounts-list li {
+    margin-bottom: 10px;
+  }
+  
+  .accounts-list li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .accounts-list li a:hover {
+    color: #007bff;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  

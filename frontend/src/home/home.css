@@ -1,0 +1,43 @@
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .home-container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .home-container nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-bottom: 20px;
+  }
+
+  .home-container nav ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .home-container nav ul li {
+    margin-right: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .home-container nav ul li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .home-container img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  

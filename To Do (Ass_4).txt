@@ -1,0 +1,21 @@
+1. Form for login (name, email, ....)
+
+2. add account details 
+
+3. profile that show his name email and accounts data
+	
+4. add three categories (select html)
+
+5. the user could add other categories
+
+6. the user can initiate a transaction (select the account of the sender, amount, category, date)
+
+7. the user can add many reminders
+
+8. the user can select a goal for each account
+
+9. OTHER QURIES
+
+10. OTHER QURIES
+
+11. OTHER QURIES

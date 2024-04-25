@@ -3,6 +3,7 @@ CREATE TABLE User (
     UserName VARCHAR(255) NOT NULL,
     FullName VARCHAR(255) NOT NULL,
     Email VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
     PhoneNumber VARCHAR(20),
     Location VARCHAR(255),
     Job VARCHAR(255)
@@ -11,6 +12,7 @@ CREATE TABLE User (
 CREATE TABLE Account (
     AccountID INT PRIMARY KEY AUTO_INCREMENT,
     UserID INT NOT NULL,
+    AccountName VARCHAR(255) NOT NULL,
     FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
 
@@ -46,6 +48,7 @@ CREATE TABLE Reminder (
     BillName VARCHAR(255) NOT NULL,
     DueDate DATE NOT NULL,
     Recurring BOOLEAN NOT NULL,
+    Amound INT NOT NULL,
     FOREIGN KEY (AccountID) REFERENCES Account(AccountID)
 );
 

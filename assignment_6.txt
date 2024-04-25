@@ -1,0 +1,32 @@
+Assignment 6
+
+Implementing security service to our service.
+
+In this assignment, we established robust security measures to ensure controlled access and authentication for an API.
+Here's a brief overview of the implemented features:
+
+1. User Creation and Access Privileges:
+   - Created a dedicated user in the database with restricted access privileges limited to read-only operations 
+   (specifically `SELECT` statements).
+   - Utilized this user to regulate access to certain API endpoints that retrieve data from the database, 
+   ensuring that users can only read information without the ability to modify or delete.
+
+   Mysql Code: create  user 'standard'@'localhost' identified with mysql_native_password  by 'StndrdPas#1';
+
+               grant select on *.* TO 'standard'@'localhost' with grant option;
+
+2. Integration of User Access for API Endpoints:
+   - Integrated the newly created user credentials into the API endpoints that are responsible for fetching data from the database.
+   - By associating these user credentials with the appropriate endpoints, ensured that only authorized users with read-only 
+   permissions could access the data.
+
+3. Implementation of Basic Authentication:
+   - Employed the basic authentication method to fortify the security of the API.
+   - This authentication mechanism requires users to provide their username and password for authorization before accessing the 
+   API endpoints.
+   - Implemented both on the backend and frontend to enforce strict access control and block any unauthorized attempts to interact 
+   with the API.
+   
+   Authentication Used : Username: <username> password: <password>
+
+

@@ -1,0 +1,6 @@
+I want to see all my bank accounts 
+- for each I can search by name to get specific result
+- I can open a specific account to get more info such as all its reminders
+
+For all the reminders I can search for specific date
+- I can then open that reminder in a different page to see more info
