@@ -11,7 +11,7 @@ const AddAccount = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3000/accounts", {
+    axios.post("https://advanced-db-be-b37701fafad7.herokuapp.com/accounts", {
       AccountName: accountName,
       userID: userId,
     })

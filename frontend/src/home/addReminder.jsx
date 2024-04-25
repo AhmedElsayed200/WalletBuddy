@@ -13,7 +13,7 @@ const AddReminder = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3000/reminder", {
+    axios.post("https://advanced-db-be-b37701fafad7.herokuapp.com/reminder", {
       AccountID: accountID,
       DueDate: date,
       Amount: amount,

@@ -16,15 +16,15 @@ const Register = () => {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
-  const username='admin';
-  const passwordd = 'admin123';
+  const username = "admin";
+  const passwordd = "admin123";
   const token = btoa(`${username}:${passwordd}`);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post(
-        "http://localhost:3000/register",
+        "https://advanced-db-be-b37701fafad7.herokuapp.com/register",
         {
           UserName: userName,
           FullName: fullName,
@@ -36,7 +36,7 @@ const Register = () => {
         },
         {
           headers: {
-            Authorization: `Basic ${token}`
+            Authorization: `Basic ${token}`,
           },
         }
       )

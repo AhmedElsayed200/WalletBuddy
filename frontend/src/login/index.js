@@ -12,21 +12,25 @@ const Login = () => {
   const [redirectToReferrer, setRedirectToReferrer] = useState(false);
   const { isLoggedIn, login, setUser } = useAuth();
 
-  const username='admin';
-  const passwordd = 'admin123';
+  const username = "admin";
+  const passwordd = "admin123";
   const token = btoa(`${username}:${passwordd}`);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/login", {
-        Email: email,
-        Password: password,
-      }, {
-        headers: {
-          Authorization: `Basic ${token}`
+      .post(
+        "https://advanced-db-be-b37701fafad7.herokuapp.com/login",
+        {
+          Email: email,
+          Password: password,
+        },
+        {
+          headers: {
+            Authorization: `Basic ${token}`,
+          },
         }
-      })
+      )
       .then((res) => {
         console.log(res.data);
         setError(null);

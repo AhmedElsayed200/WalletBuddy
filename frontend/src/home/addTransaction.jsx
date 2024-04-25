@@ -11,7 +11,7 @@ const AddTransaction = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3000/transactions", {
+    axios.post("https://advanced-db-be-b37701fafad7.herokuapp.com/transactions", {
       AccountID: accountID,
       Date: date,
       Amount: amount,
