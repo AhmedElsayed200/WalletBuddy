@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/WalletBuddy/static/css/main.8c95dcb7.css",
+    "main.js": "/WalletBuddy/static/js/main.5c3d2094.js",
+    "static/media/wallet-buddy.png": "/WalletBuddy/static/media/wallet-buddy.d734fb8071694f75baf0.png",
+    "index.html": "/WalletBuddy/index.html",
+    "main.8c95dcb7.css.map": "/WalletBuddy/static/css/main.8c95dcb7.css.map",
+    "main.5c3d2094.js.map": "/WalletBuddy/static/js/main.5c3d2094.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c95dcb7.css",
+    "static/js/main.5c3d2094.js"
+  ]
+}
