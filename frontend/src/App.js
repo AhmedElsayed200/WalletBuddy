@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./home";
 import Login from "./login";
 import Register from "./register";
@@ -45,7 +45,7 @@ export const useAuth = () => {
 const App = () => {
   return (
     <AuthProvider>
-      <BrowserRouter basename="/">
+      <Router basename="/">
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -54,7 +54,7 @@ const App = () => {
           <Route path="/bank-accounts/:id" element={<Account />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </Router>
     </AuthProvider>
   );
 };
