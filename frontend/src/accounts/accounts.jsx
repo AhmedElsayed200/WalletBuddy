@@ -19,7 +19,7 @@ const Accounts = () => {
   const fetchAccounts = async () => {
     try {
       const response = await axios.get(
-        `https://advanced-db-be-b37701fafad7.herokuapp.com/accounts?UserID=${userId}&AccountName=${searchTerm}`
+        `http://localhost:3000/accounts?UserID=${userId}&AccountName=${searchTerm}`
       );
       setAccounts(response.data.reminders);
     } catch (err) {

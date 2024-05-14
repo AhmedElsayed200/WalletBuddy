@@ -9,7 +9,7 @@ const AddCategory = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("https://advanced-db-be-b37701fafad7.herokuapp.com/category", {
+    axios.post("http://localhost:3000/category", {
       CategoryName: categoryName,
     })
     .then((res) => {

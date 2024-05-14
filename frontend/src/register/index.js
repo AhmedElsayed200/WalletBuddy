@@ -24,7 +24,7 @@ const Register = () => {
     e.preventDefault();
     axios
       .post(
-        "https://advanced-db-be-b37701fafad7.herokuapp.com/register",
+        "http://localhost:3000/register",
         {
           UserName: userName,
           FullName: fullName,

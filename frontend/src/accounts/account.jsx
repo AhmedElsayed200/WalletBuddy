@@ -15,7 +15,7 @@ const Account = () => {
     const fetchAccount = async () => {
       try {
         const response = await axios.get(
-          `https://advanced-db-be-b37701fafad7.herokuapp.com/accounts?UserID=${userId}&AccountName=${id}`
+          `http://localhost:3000/accounts?UserID=${userId}&AccountName=${id}`
         );
         setAccount(response.data.reminders[0]);
       } catch (error) {
@@ -30,7 +30,7 @@ const Account = () => {
     try {
         const formattedDate =  searchDate.length == 10 ? searchDate : `${searchDate.getFullYear()}-${(searchDate.getMonth() + 1).toString().padStart(2, '0')}-${searchDate.getDate().toString().padStart(2, '0')}`;
       const response = await axios.get(
-        `https://advanced-db-be-b37701fafad7.herokuapp.com/reminders?AccountID=${account?.AccountID}&DueDate=${formattedDate}`
+        `http://localhost:3000/reminders?AccountID=${account?.AccountID}&DueDate=${formattedDate}`
       );
       console.log(response)
       setReminders(response.data.reminders);

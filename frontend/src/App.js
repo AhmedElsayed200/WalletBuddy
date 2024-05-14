@@ -6,6 +6,7 @@ import Register from "./register";
 import Accounts from "./accounts/accounts";
 import Account from "./accounts/account";
 import Footer from "./footer";
+import ClientLocationMap from "./location";
 
 const AuthContext = createContext();
 
@@ -50,9 +51,11 @@ const App = () => {
           <Route path="/" exact element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          {/* <Route path="/client-location" element={<ClientLocationMap />} /> */}
           <Route path="/bank-accounts" element={<Accounts />} />
           <Route path="/bank-accounts/:id" element={<Account />} />
         </Routes>
+        {/* <ClientLocationMap /> */}
         <Footer />
       </Router>
     </AuthProvider>
