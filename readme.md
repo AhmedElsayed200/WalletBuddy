@@ -60,3 +60,5 @@ The relationships between these entities are as follows:
 This ERD ensures a comprehensive and organized database structure to support the functionalities of WalletBuddy.
 
 ![ERD](ERD.png)
+
+WalletBuddy Website : https://ahmedelsayed200.github.io/WalletBuddy/#/login
