@@ -4,7 +4,7 @@ const express = require("express");
 var cors = require("cors");
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
-const basicAuth = require('express-basic-auth');
+// const basicAuth = require('express-basic-auth');
 
 const app = express();
 
@@ -15,21 +15,21 @@ app.use(cors());
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Godblessabayo@1",
+  password: "root",
   database: "walletbuddy",
 });
 
-const basicAuthMiddleware = basicAuth({
-  users: { 'admin': 'admin123' }, // Change this to your actual credentials
-  unauthorizedResponse: { message: 'Unauthorized' }
-});
+// const basicAuthMiddleware = basicAuth({
+//   users: { 'admin': 'admin123' }, // Change this to your actual credentials
+//   unauthorizedResponse: { message: 'Unauthorized' }
+// });
 
-app.use(basicAuthMiddleware);
+// app.use(basicAuthMiddleware);
 
 const connect_standard = mysql.createConnection({
   host: "localhost",
-  user: "standard",
-  password: "StndrdPas#1",
+  user: "root",
+  password: "root",
   database: "walletbuddy",
 });
 
