@@ -40,6 +40,10 @@ const Home = () => {
       {activeTab === "addCategory" && <AddCategory />}
       {activeTab === "addTransaction" && <AddTransaction />}
       {activeTab === "addReminder" && <AddReminder />}
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
+        <button style={{ border: "none", padding: "8px", borderRadius: "5px", background: "black", color: "white", cursor: "pointer" }} onClick={() => window.location.href = "https://ahmedelsayed200.github.io/locationAPI/"}>View My Location</button>
+
+      </div>
     </div>
   );
 };
