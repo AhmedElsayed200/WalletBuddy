@@ -7,29 +7,30 @@ const AddReminder = () => {
   const [date, setDate] = useState("");
   const [amount, setAmount] = useState("");
   const [billName, setBillName] = useState("");
-  const [recurring, setRecurring] = useState("No"); 
+  const [recurring, setRecurring] = useState("No");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3000/reminder", {
-      AccountID: accountID,
-      DueDate: date,
-      Amount: amount,
-      BillName: billName,
-      Recurring: recurring === "Yes", 
-    })
-    .then((res) => {
-      console.log(res.data);
-      setError(null);
-      setMessage(res.data.message);
-    })
-    .catch((err) => {
-      console.error(err);
-      setMessage(null);
-      setError(err.response.data.error);
-    });
+    axios
+      .post("https://advanced-db-be-b37701fafad7.herokuapp.com/reminder", {
+        AccountID: accountID,
+        DueDate: date,
+        Amount: amount,
+        BillName: billName,
+        Recurring: recurring === "Yes",
+      })
+      .then((res) => {
+        console.log(res.data);
+        setError(null);
+        setMessage(res.data.message);
+      })
+      .catch((err) => {
+        console.error(err);
+        setMessage(null);
+        setError(err.response.data.error);
+      });
   };
 
   return (
@@ -65,14 +66,14 @@ const AddReminder = () => {
           required
         />
         <div className="recurring-container">
-        <label htmlFor="recurring">Is the bill recurring?</label>
-        <select
-          value={recurring}
-          onChange={(e) => setRecurring(e.target.value)}
-        >
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
+          <label htmlFor="recurring">Is the bill recurring?</label>
+          <select
+            value={recurring}
+            onChange={(e) => setRecurring(e.target.value)}
+          >
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
         </div>
         <button type="submit">Add Reminder</button>
       </form>
@@ -80,7 +81,6 @@ const AddReminder = () => {
       {error && <p className="error">{error}</p>}
     </div>
   );
-
 };
 
 export default AddReminder;

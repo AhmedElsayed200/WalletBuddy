@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../App";
 import axios from "axios";
-import "./addAccount.css"; 
+import "./addAccount.css";
 
 const AddAccount = () => {
   const [accountName, setAccountName] = useState("");
@@ -11,24 +11,24 @@ const AddAccount = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3000/accounts", {
-      AccountName: accountName,
-      userID: userId,
-    })
-    .then((res) => {
-      console.log(res.data);
-      setError(null)
-      setMessage(res.data.message);
-    })
-    .catch((err) => {
-      console.error(err);
-      setMessage(null)
-      setError(err.response.data.error);
-    });
+    axios
+      .post("https://advanced-db-be-b37701fafad7.herokuapp.com/accounts", {
+        AccountName: accountName,
+        userID: userId,
+      })
+      .then((res) => {
+        console.log(res.data);
+        setError(null);
+        setMessage(res.data.message);
+      })
+      .catch((err) => {
+        console.error(err);
+        setMessage(null);
+        setError(err.response.data.error);
+      });
   };
-  useEffect(()=>{},[]);
-  
-  
+  useEffect(() => {}, []);
+
   return (
     <div className="add-account-container">
       <h2>Add Account</h2>

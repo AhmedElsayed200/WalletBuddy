@@ -11,20 +11,21 @@ const AddTransaction = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3000/transactions", {
-      AccountID: accountID,
-      Date: date,
-      Amount: amount,
-      CategoryID: categoryID,
-    })
-    .then((res) => {
-      console.log(res.data);
-      setMessage(res.data.message);
-    })
-    .catch((err) => {
-      console.error(err);
-      setMessage(err.error);
-    });
+    axios
+      .post("https://advanced-db-be-b37701fafad7.herokuapp.com/transactions", {
+        AccountID: accountID,
+        Date: date,
+        Amount: amount,
+        CategoryID: categoryID,
+      })
+      .then((res) => {
+        console.log(res.data);
+        setMessage(res.data.message);
+      })
+      .catch((err) => {
+        console.error(err);
+        setMessage(err.error);
+      });
   };
 
   return (
@@ -64,7 +65,6 @@ const AddTransaction = () => {
       {message && <p className="message">{message}</p>}
     </div>
   );
-
 };
 
 export default AddTransaction;

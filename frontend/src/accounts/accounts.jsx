@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./accounts.css"; 
+import "./accounts.css";
 import { useAuth } from "../App";
 import { Link, Navigate } from "react-router-dom";
-
 
 const Accounts = () => {
   const [accounts, setAccounts] = useState([]);
@@ -11,7 +10,7 @@ const Accounts = () => {
   const [error, setError] = useState("");
 
   const { isLoggedIn, userId } = useAuth();
-  
+
   useEffect(() => {
     fetchAccounts();
   }, [searchTerm]);
@@ -19,7 +18,7 @@ const Accounts = () => {
   const fetchAccounts = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/accounts?UserID=${userId}&AccountName=${searchTerm}`
+        `https://advanced-db-be-b37701fafad7.herokuapp.com/accounts?UserID=${userId}&AccountName=${searchTerm}`
       );
       setAccounts(response.data.reminders);
     } catch (err) {
